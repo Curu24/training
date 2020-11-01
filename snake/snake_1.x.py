@@ -6,7 +6,7 @@ pygame.init()
 
 #Caption and icon
 screen = pygame.display.set_mode((400, 680))
-pygame.display.set_caption("Snake v1.1")
+pygame.display.set_caption("Snake v1.2")
 icon = pygame.image.load("snake.png")
 pygame.display.set_icon(icon)
 
@@ -14,7 +14,7 @@ pygame.display.set_icon(icon)
 simg = pygame.image.load("snk.png")
 hx = 200
 hy = 300
-speed = 0.25
+speed = 1
 body = [(200, 300)]
 def snake():
     for element in body:
@@ -160,6 +160,7 @@ while running:
         head()
         dot(dx, dy)
         showscore(10, 600)
+        pygame.time.wait(8)
 
     elif state == "game_over":
         gover = font2.render("GAME OVER!" , True, (255, 255, 255))
